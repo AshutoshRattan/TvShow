@@ -1,16 +1,19 @@
-/* body{
+body{
     background-image: url('./img.jpg');
-    height: 100%;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-} */
+    background-attachment: fixed;
+}
 #top{
-    /* margin: 0px; */
+    padding: 0px;
+    margin: 0px;
+    width: 100%;;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: cadetblue;
-    opacity: 0.75;
+    opacity: 1;
+    z-index: 5;
 }
 
 nav{
@@ -21,7 +24,9 @@ nav{
 
 #home, #favourites{
     text-decoration: none;
-    padding: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    margin-top: 0px;
     font-size: 40px;
     color: white;
 }
@@ -38,7 +43,7 @@ nav{
     background-color: cadetblue;
     opacity: 0.75;
     height: 40px;
-    width: 300px;
+    width: 500px;
 }
 
 #end{
@@ -49,5 +54,38 @@ nav{
 
 .card{
     display: flex;
-    
+    flex-direction: row;
+    width: 500px;
+    margin: 10px;
+}
+
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details{
+    background-color: rgb(78, 18, 18);
+    opacity: 0.8;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+}
+
+.fav{
+    background-color: red;
+    opacity: 0.8;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+}
+
+.title{
+    text-align: left;
+    margin-left: 20px;
 }

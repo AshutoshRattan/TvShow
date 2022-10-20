@@ -12,25 +12,31 @@ searchBox.addEventListener('input', async function(e){
     res.data.forEach(element => {
         let div = document.createElement('div')
         let img = document.createElement('img')
+        let textDiv = document.createElement('div')
         let title = document.createElement('div')
-        let details = document.createElement('div')
-        let fav = document.createElement('div')
+        let details = document.createElement('a')
+        let fav = document.createElement('a')
 
         if(element.show.image) img.setAttribute('src', element.show.image.medium)
-        img.setAttribute('height', 100)
-        img.setAttribute('width', 70)
+        img.setAttribute('height', 150)
+        img.setAttribute('width', 150)
         div.appendChild(img)
 
         title.innerText = element.show.name
-        div.appendChild(title)
+        title.classList.add('title')
+        textDiv.appendChild(title)
 
         details.innerText = "Details"
-        div.appendChild(details)
+        details.classList.add('details')
+        textDiv.appendChild(details)
 
-        fav.innerText = "Add to My Favourites"
-        div.appendChild(fav)
+        fav.innerText = "Add to My Favourites"  
+        fav.classList.add('fav')
+        textDiv.appendChild(fav)
 
-        endDiv.classList.add("card")
+        div.appendChild(textDiv)
+        textDiv.classList.add('textDiv')
+        div.classList.add("card")
         endDiv.appendChild(div)
 
     })
