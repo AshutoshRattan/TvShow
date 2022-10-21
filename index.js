@@ -1,14 +1,23 @@
 let searchBox = document.querySelector("#searchBox")
 let endDiv = document.querySelector("#end")
+let topDiv = document.querySelector("#top")
+let body = document.querySelector('body')
 
-searchBox.addEventListener('input', async function(e){
+let favourite = JSON.parse(localStorage.getItem('favourite'))
+if (!favourite) {
+    let arr = []
+    localStorage.setItem('favourite', JSON.stringify(arr))
+    favourite = []
+}
+
+searchBox.addEventListener('input', async function (e) {
     let query = e.target.value
     console.log(query)
     endDiv.innerHTML = ""
     let res = await axios.get(`https://api.tvmaze.com/search/shows?q=${query}`)
     let data = res.data
     console.log(data)
-    if(data == []) return
+    if (data == []) return
     res.data.forEach(element => {
         let div = document.createElement('div')
         let img = document.createElement('img')
@@ -17,7 +26,7 @@ searchBox.addEventListener('input', async function(e){
         let details = document.createElement('a')
         let fav = document.createElement('a')
 
-        if(element.show.image) img.setAttribute('src', element.show.image.medium)
+        if (element.show.image) img.setAttribute('src', element.show.image.medium)
         img.setAttribute('height', 150)
         img.setAttribute('width', 150)
         div.appendChild(img)
@@ -30,9 +39,44 @@ searchBox.addEventListener('input', async function(e){
         details.setAttribute('href', `./details.html?q=${element.show.externals.thetvdb}`)
         details.classList.add('details')
         textDiv.appendChild(details)
+        if (favourite && favourite.includes(element.show.externals.thetvdb)) { fav.innerText = "Remove From My Favourites" }
+        else { fav.innerText = "Add to My Favourites" }
+        // fav.setAttribute('href', `./favourites.html`)
 
-        fav.innerText = "Add to My Favourites"  
-        fav.setAttribute('href', `./favourites.html`)
+        fav.addEventListener('click', function (e) {
+            let favourite = JSON.parse(localStorage.getItem('favourite'))
+            if (fav.innerText == "Remove From My Favourites") {
+                favourite = favourite.filter(e => e !== element.show.externals.thetvdb)
+                localStorage.setItem('favourite', JSON.stringify(favourite))
+                fav.innerText = 'Add to My Favourites'
+                
+                let temp = document.createElement('div')
+                temp.classList.add('tempBanner')
+                temp.innerText = "Added to favourites"
+                body.appendChild(temp)
+                setTimeout(function(){
+                    console.log(123)
+                    body.removeChild(temp)
+                }, 1500)
+
+            }
+            else {
+                favourite.push(element.show.externals.thetvdb)
+                localStorage.setItem('favourite', JSON.stringify(favourite))
+                fav.innerText = "Remove From My Favourites"
+
+                let temp = document.createElement('div')
+                temp.classList.add('tempBanner')
+                temp.innerText = "Removed from favourites"
+                body.appendChild(temp)
+                setTimeout(function(){
+                    console.log(123)
+                    body.removeChild(temp)
+                }, 1500)
+
+            }
+
+        })
         fav.classList.add('fav')
         textDiv.appendChild(fav)
 
