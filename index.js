@@ -27,10 +27,12 @@ searchBox.addEventListener('input', async function(e){
         textDiv.appendChild(title)
 
         details.innerText = "Details"
+        details.setAttribute('href', `./details.html?q=${element.show.externals.thetvdb}`)
         details.classList.add('details')
         textDiv.appendChild(details)
 
         fav.innerText = "Add to My Favourites"  
+        fav.setAttribute('href', `./favourites.html`)
         fav.classList.add('fav')
         textDiv.appendChild(fav)
 

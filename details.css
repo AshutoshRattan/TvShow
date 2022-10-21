@@ -1,0 +1,29 @@
+#red{
+    height: 50vh;
+    width: 100vw;
+    background-color: red;
+}
+
+#brown {
+    height: 50vh;
+    width: 100vw;
+    background-color: brown;
+}
+
+#imgDiv{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 40vw;
+    top: 30vh;
+}
+
+#img{
+    height: 300px;
+    width: 300px;
+    border-radius: 200px;
+    border: 20px;
+    border-color: aquamarine;
+    z-index: 5;
+}

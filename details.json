@@ -1,0 +1,55 @@
+{
+    "id": 5631,
+    "url": "https://www.tvmaze.com/shows/5631/car-sos",
+    "name": "Car S.O.S",
+    "type": "Documentary",
+    "language": "English",
+    "genres": [],
+    "status": "Running",
+    "runtime": 60,
+    "averageRuntime": 56,
+    "premiered": "2013-02-07",
+    "ended": null,
+    "officialSite": "http://natgeotv.com/uk/car-sos",
+    "schedule": {
+        "time": "20:00",
+        "days": [
+            "Thursday"
+        ]
+    },
+    "rating": {
+        "average": 7.9
+    },
+    "weight": 89,
+    "network": {
+        "id": 242,
+        "name": "National Geographic Channel",
+        "country": {
+            "name": "United Kingdom",
+            "code": "GB",
+            "timezone": "Europe/London"
+        },
+        "officialSite": null
+    },
+    "webChannel": null,
+    "dvdCountry": null,
+    "externals": {
+        "tvrage": 35146,
+        "thetvdb": 266851,
+        "imdb": null
+    },
+    "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/100/250748.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/100/250748.jpg"
+    },
+    "summary": "<p>We Brits love our cars but, just like any relationship, sometimes things can get a little rusty. Meet master mechanic Fuzz Townshend and radio and TV presenter Tim Shaw, a petrol-head pair who undertake dramatic automobile interventions across the UK, hoping to return some much-loved motors to their former glory. With a tight deadline to turn each job around without the owners knowing, find out how these neglected classics fell in need of a little loving care – and what Fuzz and Tim can do to get them back on the road.</p>",
+    "updated": 1652941775,
+    "_links": {
+        "self": {
+            "href": "https://api.tvmaze.com/shows/5631"
+        },
+        "previousepisode": {
+            "href": "https://api.tvmaze.com/episodes/2291430"
+        }
+    }
+}
