@@ -52,7 +52,7 @@ searchBox.addEventListener('input', async function (e) {
                 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
-                temp.innerText = "Added to favourites"
+                temp.innerText = "Removed from favourites"
                 body.appendChild(temp)
                 setTimeout(function(){
                     console.log(123)
@@ -67,7 +67,7 @@ searchBox.addEventListener('input', async function (e) {
 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
-                temp.innerText = "Removed from favourites"
+                temp.innerText = "Added to favourites"
                 body.appendChild(temp)
                 setTimeout(function(){
                     console.log(123)

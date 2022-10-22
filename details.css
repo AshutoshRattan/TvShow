@@ -66,3 +66,18 @@ body{
     font-size: 40px;
     color: white;
 }
+
+.tempBanner {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    z-index: 6;
+    position: fixed;
+    top: 30px;
+    right: 41vw;
+    background-color: green;
+    color: white;
+    height: 50px;
+    width: 200px;
+}
