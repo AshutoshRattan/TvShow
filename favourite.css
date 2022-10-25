@@ -4,10 +4,7 @@
 }
 
 body {
-    background-image: url('./img.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #0a143c;
 }
 
 #top {
@@ -28,7 +25,7 @@ body {
     padding-right: 20px;
     padding-top: 0px;
     margin-top: 0px;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 
@@ -61,9 +58,13 @@ body {
     display: flex;
     flex-direction: column;
     margin: 30px;
+    padding-bottom: 10px;
+    border-radius: 20px;
 }
 
 .img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     height: 300px;
     width: 300px;
 }
@@ -77,13 +78,40 @@ body {
 .like {
     padding: auto;
     margin: auto;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+.like:hover {
+    cursor: pointer;
+    transform: scale(1.5)
 }
 
 .details {
     text-align: center;
+    align-self: center;
     text-decoration: none;
+    width: 100px;
     padding-top: 0px;
     margin-top: 0px;
     font-size: 20px;
     color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+
+}
+
+.details:hover{
+    background-color: white;
+    color: black;
+}
+
+#tvshow {
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+}
+nav {
+    display: flex;
+    align-items: center;
 }
