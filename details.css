@@ -100,5 +100,6 @@ nav {
 #tvshow {
     color: white;
     font-size: 60px;
+    margin-left: 10px;
     font-style: italic;
 }

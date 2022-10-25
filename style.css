@@ -51,8 +51,7 @@ nav{
 #searchBox{
     margin-top: 250px;
     border-radius: 10px;
-    background-color: cadetblue;
-    opacity: 0.75;
+    background-color: rgba(25, 95, 154, 0.75);
     height: 40px;
     width: 500px;
     color: white;
