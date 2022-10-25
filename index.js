@@ -39,16 +39,16 @@ searchBox.addEventListener('input', async function (e) {
         details.setAttribute('href', `./details.html?q=${element.show.externals.thetvdb}`)
         details.classList.add('details')
         textDiv.appendChild(details)
-        if (favourite && favourite.includes(element.show.externals.thetvdb)) { fav.innerText = "Remove From My Favourites" }
-        else { fav.innerText = "Add to My Favourites" }
+        if (favourite && favourite.includes(element.show.externals.thetvdb)) { fav.innerText = "Remove From My Favourites❌" }
+        else { fav.innerText = "Add to My Favourites❤" }
         // fav.setAttribute('href', `./favourites.html`)
 
         fav.addEventListener('click', function (e) {
             let favourite = JSON.parse(localStorage.getItem('favourite'))
-            if (fav.innerText == "Remove From My Favourites") {
+            if (fav.innerText == "Remove From My Favourites❌") {
                 favourite = favourite.filter(e => e !== element.show.externals.thetvdb)
                 localStorage.setItem('favourite', JSON.stringify(favourite))
-                fav.innerText = 'Add to My Favourites'
+                fav.innerText = 'Add to My Favourites❤'
                 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
@@ -63,7 +63,7 @@ searchBox.addEventListener('input', async function (e) {
             else {
                 favourite.push(element.show.externals.thetvdb)
                 localStorage.setItem('favourite', JSON.stringify(favourite))
-                fav.innerText = "Remove From My Favourites"
+                fav.innerText = "Remove From My Favourites❌"
 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')

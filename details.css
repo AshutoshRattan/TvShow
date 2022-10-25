@@ -3,8 +3,8 @@
     padding: 0;
 }
 
-body{
-    background-color: blueviolet;
+body {
+    background-color: #0a143c;
 }
 
 
@@ -21,40 +21,44 @@ body{
     z-index: 5;
 }
 
-#red{
+#red {
     border-top-right-radius: 20px;
-    border-top-left-radius:20px;
-    margin-top: 80px;
+    border-top-left-radius: 20px;
+    margin-top: 120px;
     margin-left: 225px;
-    height: 40vh;
+    height: 39vh;
     width: 66vw;
-    background-color: red;
+    background-color: #d71231;
 }
 
 #brown {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     margin-left: 225px;
-    height: 40vh;
+    height: 39vh;
     width: 66vw;
-    background-color: brown;
+    background-color: #131313;
 }
 
-#imgDiv{
+#imgDiv {
     position: fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
     left: 40vw;
-    top: 28vh;
+    top: 35vh;
 }
 
-#img{
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#img {
     height: 300px;
     width: 300px;
     border-radius: 200px;
-    border: 20px;
-    border-color: aquamarine;
+    border: 5px solid #131313;
     z-index: 5;
 }
 
@@ -63,7 +67,7 @@ body{
     padding-right: 20px;
     padding-top: 0px;
     margin-top: 0px;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 
@@ -74,10 +78,27 @@ body{
     justify-content: center;
     z-index: 6;
     position: fixed;
-    top: 30px;
+    top: 70px;
     right: 41vw;
     background-color: green;
     color: white;
     height: 50px;
     width: 200px;
+}
+
+#like:hover {
+    cursor: pointer;
+    transform: scale(1.5)
+}
+
+#heading {
+    color: white;
+    font-style: italic;
+
+}
+
+#tvshow {
+    color: white;
+    font-size: 60px;
+    font-style: italic;
 }
