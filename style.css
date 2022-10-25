@@ -30,6 +30,7 @@ nav{
     color: white;
     font-size: 60px;
     font-style: italic;
+    margin-left: 60px;
 }
 
 #home, #favourites{
@@ -54,6 +55,8 @@ nav{
     opacity: 0.75;
     height: 40px;
     width: 500px;
+    color: white;
+    padding-left: 60px;
 }
 
 #end{
