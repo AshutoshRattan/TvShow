@@ -39,7 +39,7 @@ searchBox.addEventListener('input', async function (e) {
         details.setAttribute('href', `./details.html?q=${element.show.externals.thetvdb}`)
         details.classList.add('details')
         textDiv.appendChild(details)
-        if (favourite && favourite.includes(element.show.externals.thetvdb)) { fav.innerText = "Remove From My Favourites❌" }
+        if (favourite && favourite.includes(element.show.externals.thetvdb)) { fav.innerText = "Remove from My Favourites❌" }
         else { fav.innerText = "Add to My Favourites❤️" }
         // fav.setAttribute('href', `./favourites.html`)
 
