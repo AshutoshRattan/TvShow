@@ -49,7 +49,7 @@ searchBox.addEventListener('input', async function (e) {
                 favourite = favourite.filter(e => e !== element.show.externals.thetvdb)
                 localStorage.setItem('favourite', JSON.stringify(favourite))
                 fav.innerText = 'Add to My Favourites❤️'
-                
+
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
                 temp.innerText = "Removed from Favourites"
@@ -57,7 +57,7 @@ searchBox.addEventListener('input', async function (e) {
                 setTimeout(function () {
                     console.log(123)
                     body.removeChild(temp)
-                }, 1500)
+                }, 1000)
 
             }
             else {
@@ -72,7 +72,7 @@ searchBox.addEventListener('input', async function (e) {
                 setTimeout(function () {
                     console.log(123)
                     body.removeChild(temp)
-                }, 1500)
+                }, 1000)
 
             }
 

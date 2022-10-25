@@ -41,7 +41,7 @@ window.onload = async function () {
         details.innerText = 'Details'
         details.setAttribute('href', `http://127.0.0.1:5500/details.html?q=${element}`)
 
-        like.addEventListener('click', function(e){
+        like.addEventListener('click', function (e) {
             if (like.innerText == "❤️") {
                 console.log("red")
                 like.innerText = "🖤"
@@ -55,7 +55,7 @@ window.onload = async function () {
                 setTimeout(function () {
                     console.log(123)
                     body.removeChild(temp)
-                }, 1500)
+                }, 1000)
                 card.remove()
             }
             else {
@@ -71,7 +71,7 @@ window.onload = async function () {
                 setTimeout(function () {
                     console.log(123)
                     body.removeChild(temp)
-                }, 1500)
+                }, 1000)
             }
         })
 

@@ -4,7 +4,7 @@ let likes = document.querySelector("#like")
 let body = document.querySelector("body")
 
 let list = JSON.parse(window.localStorage.getItem('favourite'))
-if(!list){
+if (!list) {
     list = []
     window.localStorage.setItem('favourite', "[]")
 }
@@ -28,10 +28,10 @@ window.onload = async function () {
     let imgUrl = data.image.medium
     img.setAttribute('src', imgUrl)
     title.innerText = name
-    if(list.includes(query)){
+    if (list.includes(query)) {
         likes.innerText = "❤️"
     }
-    else{
+    else {
         likes.innerText = "🖤"
     }
 }
@@ -39,8 +39,8 @@ window.onload = async function () {
 
 
 
-likes.addEventListener('click', function(){
-    if (likes.innerText == "❤️"){
+likes.addEventListener('click', function () {
+    if (likes.innerText == "❤️") {
         console.log("red")
         likes.innerText = "🖤"
         list = list.filter(e => e != query)
@@ -53,15 +53,15 @@ likes.addEventListener('click', function(){
         setTimeout(function () {
             console.log(123)
             body.removeChild(temp)
-        }, 1500)
+        }, 1000)
 
     }
-    else{
+    else {
         console.log("black")
         likes.innerText = "❤️"
         list.push(parseInt(query))
-        window.localStorage.setItem('favourite', JSON.stringify(list))     
-        
+        window.localStorage.setItem('favourite', JSON.stringify(list))
+
         let temp = document.createElement('div')
         temp.classList.add('tempBanner')
         temp.innerText = "Added to Favourites"
@@ -69,6 +69,6 @@ likes.addEventListener('click', function(){
         setTimeout(function () {
             console.log(123)
             body.removeChild(temp)
-        }, 1500)
+        }, 1000)
     }
 })
