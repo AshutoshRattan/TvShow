@@ -16,8 +16,7 @@ body{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: cadetblue;
-    opacity: 1;
+    background-color: rgba(181, 19, 126, 0.8);
     z-index: 5;
 }
 
@@ -27,12 +26,18 @@ nav{
 
 }
 
+#tvshow{
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+}
+
 #home, #favourites{
     text-decoration: none;
     padding-right: 20px;
     padding-top: 0px;
     margin-top: 0px;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 
@@ -43,7 +48,7 @@ nav{
 }
 
 #searchBox{
-    margin-top: 100px;
+    margin-top: 250px;
     border-radius: 10px;
     background-color: cadetblue;
     opacity: 0.75;
@@ -80,6 +85,10 @@ nav{
     margin: 20px;
     text-decoration: none;
 }
+.details:hover{
+    background-color: white;
+    color: black;
+}
 
 .fav{
     background-color: red;
@@ -91,7 +100,10 @@ nav{
     margin: 20px;
     text-decoration: none;
 }
-
+.fav:hover{
+    background-color: white;
+    color: black;
+}
 .title{
     text-align: left;
     margin-left: 20px;
