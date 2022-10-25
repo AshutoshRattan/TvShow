@@ -101,6 +101,7 @@ nav{
     text-decoration: none;
 }
 .fav:hover{
+    cursor: pointer;
     background-color: white;
     color: black;
 }
@@ -117,7 +118,7 @@ nav{
     justify-content: center;
     z-index: 6;
     position: fixed;
-    top: 30px;
+    top: 70px;
     right: 40vw;
     background-color: red;
     color: white;

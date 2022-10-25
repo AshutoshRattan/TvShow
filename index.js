@@ -35,26 +35,26 @@ searchBox.addEventListener('input', async function (e) {
         title.classList.add('title')
         textDiv.appendChild(title)
 
-        details.innerText = "Details"
+        details.innerText = "Details💪"
         details.setAttribute('href', `./details.html?q=${element.show.externals.thetvdb}`)
         details.classList.add('details')
         textDiv.appendChild(details)
         if (favourite && favourite.includes(element.show.externals.thetvdb)) { fav.innerText = "Remove From My Favourites❌" }
-        else { fav.innerText = "Add to My Favourites❤" }
+        else { fav.innerText = "Add to My Favourites❤️" }
         // fav.setAttribute('href', `./favourites.html`)
 
         fav.addEventListener('click', function (e) {
             let favourite = JSON.parse(localStorage.getItem('favourite'))
-            if (fav.innerText == "Remove From My Favourites❌") {
+            if (fav.innerText == "Remove from My Favourites❌") {
                 favourite = favourite.filter(e => e !== element.show.externals.thetvdb)
                 localStorage.setItem('favourite', JSON.stringify(favourite))
-                fav.innerText = 'Add to My Favourites❤'
+                fav.innerText = 'Add to My Favourites❤️'
                 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
-                temp.innerText = "Removed from favourites"
+                temp.innerText = "Removed from Favourites"
                 body.appendChild(temp)
-                setTimeout(function(){
+                setTimeout(function () {
                     console.log(123)
                     body.removeChild(temp)
                 }, 1500)
@@ -63,13 +63,13 @@ searchBox.addEventListener('input', async function (e) {
             else {
                 favourite.push(element.show.externals.thetvdb)
                 localStorage.setItem('favourite', JSON.stringify(favourite))
-                fav.innerText = "Remove From My Favourites❌"
+                fav.innerText = "Remove from My Favourites❌"
 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
-                temp.innerText = "Added to favourites"
+                temp.innerText = "Added to Favourites"
                 body.appendChild(temp)
-                setTimeout(function(){
+                setTimeout(function () {
                     console.log(123)
                     body.removeChild(temp)
                 }, 1500)

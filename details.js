@@ -48,7 +48,7 @@ likes.addEventListener('click', function(){
 
         let temp = document.createElement('div')
         temp.classList.add('tempBanner')
-        temp.innerText = "Removed from favourites"
+        temp.innerText = "Removed from Favourites"
         body.appendChild(temp)
         setTimeout(function () {
             console.log(123)
@@ -64,7 +64,7 @@ likes.addEventListener('click', function(){
         
         let temp = document.createElement('div')
         temp.classList.add('tempBanner')
-        temp.innerText = "Added to favourites"
+        temp.innerText = "Added to Favourites"
         body.appendChild(temp)
         setTimeout(function () {
             console.log(123)

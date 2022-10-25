@@ -1,14 +1,14 @@
 let mainDiv = document.querySelector("#main")
 
 let list = JSON.parse(window.localStorage.getItem("favourite"))
-if(!list){
+if (!list) {
     list = []
     window.localStorage.setItem("favourite", JSON.stringify(list))
 }
 
 
 
-window.onload = async function(){
+window.onload = async function () {
     await list.forEach(async element => {
         let body = document.querySelector('body')
         element = parseInt(element)
@@ -20,7 +20,7 @@ window.onload = async function(){
         let title = document.createElement('h1')
         title.classList.add("title")
         let like = document.createElement('div')
-        like.classList.add("like") 
+        like.classList.add("like")
         let details = document.createElement('a')
         details.classList.add("details")
 
@@ -28,7 +28,7 @@ window.onload = async function(){
         let data = res.data
         let name = data.name
         let imgUrl = data.image.medium
-        
+
         img.setAttribute('src', imgUrl)
         title.innerText = name
         if (list.includes(element)) {
@@ -50,7 +50,7 @@ window.onload = async function(){
 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
-                temp.innerText = "Removed from favourites"
+                temp.innerText = "Removed from Favourites"
                 body.appendChild(temp)
                 setTimeout(function () {
                     console.log(123)
@@ -66,7 +66,7 @@ window.onload = async function(){
 
                 let temp = document.createElement('div')
                 temp.classList.add('tempBanner')
-                temp.innerText = "Added to favourites"
+                temp.innerText = "Added to Favourites"
                 body.appendChild(temp)
                 setTimeout(function () {
                     console.log(123)
@@ -81,5 +81,5 @@ window.onload = async function(){
         card.appendChild(details)
         mainDiv.appendChild(card)
     })
-    
+
 }
