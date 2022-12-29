@@ -16,7 +16,7 @@ body{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(181, 19, 126, 0.8);
+    background-color: rgba(181, 19, 126, 0.9);
     z-index: 5;
 }
 
@@ -55,7 +55,7 @@ nav{
     height: 40px;
     width: 500px;
     color: white;
-    padding-left: 60px;
+    padding-left: 20px;
 }
 
 #end{

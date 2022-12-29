@@ -39,7 +39,7 @@ window.onload = async function () {
         }
 
         details.innerText = 'Details'
-        details.setAttribute('href', `http://127.0.0.1:5500/details.html?q=${element}`)
+        details.setAttribute('href', `./details.html?q=${element}`)
 
         like.addEventListener('click', function (e) {
             if (like.innerText == "❤️") {
